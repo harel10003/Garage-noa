@@ -116,60 +116,58 @@ function App() {
 
 	return (
 		<div className="App">
-			<HashRouter>
-				<Context.Provider
-					value={{
-						clientsArr,
-						setClientsArr,
-						errorsArr,
-						setErrorsArr,
-						name,
-						id,
-						address,
-						phone,
-						carNum,
-						valid,
-						showNameErr,
-						showIdErr,
-						showPhoneErr,
-						showClientDetails,
-						setShowClientDetails,
-						radioSelect,
-						setRadioSelect,
-						setShowNameErr,
-						setClientSelect,
-						clientSelect,
-						clientErrInput,
-						setClientErrInput,
-						setName,
-						setId,
-						setAddress,
-						setPhone,
-						setCarNum,
-						showTable,
-						setShowTable,
-						setShowAddErr,
-						addError,
-						showAddErr,
-						setShowAddErr,
-						err,
-						setShowErrDescription,
-						showErrDescription,
-						indx,
-						setIndx,
-						checkError,
-					}}
-				>
-					<Routes>
-						<Route path="/" element={<Homepage />} />
-						<Route path="/addclinet" element={<AddClient />} />
-						<Route
-							path={`/client/${clientsArr[indx].name}`}
-							element={<Client />}
-						/>
-					</Routes>
-				</Context.Provider>
-			</HashRouter>
+			<Context.Provider
+				value={{
+					clientsArr,
+					setClientsArr,
+					errorsArr,
+					setErrorsArr,
+					name,
+					id,
+					address,
+					phone,
+					carNum,
+					valid,
+					showNameErr,
+					showIdErr,
+					showPhoneErr,
+					showClientDetails,
+					setShowClientDetails,
+					radioSelect,
+					setRadioSelect,
+					setShowNameErr,
+					setClientSelect,
+					clientSelect,
+					clientErrInput,
+					setClientErrInput,
+					setName,
+					setId,
+					setAddress,
+					setPhone,
+					setCarNum,
+					showTable,
+					setShowTable,
+					setShowAddErr,
+					addError,
+					showAddErr,
+					setShowAddErr,
+					err,
+					setShowErrDescription,
+					showErrDescription,
+					indx,
+					setIndx,
+					checkError,
+				}}
+			>
+				<Routes>
+					<Route path="/" element={<Homepage />} />
+					<Route path="/addclinet" element={<AddClient />} />
+					<Route
+						path={`/client/${clientsArr[indx].name}`}
+						element={<Client />}
+					/>
+				</Routes>
+			</Context.Provider>
 		</div>
 	);
 }
